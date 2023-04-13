@@ -3,7 +3,6 @@ import colors from "colors";
 import dotenv from "dotenv";
 import connectMongoDB from "./config/db.js";
 import errorHandler from "./middleware/errorHandleing.js";
-import userRouter from "./routes/userRoutes.js";
 import cookieParser from "cookie-parser";
 import productRouter from "./routes/productRouter.js";
 import cors from "cors"
@@ -32,7 +31,6 @@ app.use(cors())
 
 // express rest API
 app.use('/api/v1/product', productRouter)
-app.use('/api/user', userRouter)
 
 
 
