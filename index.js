@@ -22,7 +22,8 @@ app.use(express.urlencoded({extended : false}))
 
 // make static folder
 // if anyone write in in url public rediract root file to public file
-app.use(express.static('api/public'))
+app.use(express.static('public'))
+// app.use('/static', express.static('public'))
 
 // cookie-parser config (*** Cookies parser must before rest API ***)
 app.use(cookieParser())
