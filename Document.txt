@@ -1,0 +1,12 @@
+==> complete contact with ( check, select, files, filecontrol )
+
+==> complete redux => redux-thunk
+
+==> make a static file to access images
+--> if anyone write in in url public rediract root file to public file
+    app.use(express.static('api/public'))
+
+
+==> All action in action file
+==> delete photo (call fs => filesystem default like parh)
+--> fs.unlink(path.join(__dirname, ''))
