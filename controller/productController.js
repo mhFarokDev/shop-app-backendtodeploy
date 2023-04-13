@@ -89,11 +89,11 @@ export const deleteProduct =  async (req, res, next) =>{
         if (!product) {
             next(errorController(401, "Data delete Faile"))
         }
-        fs.unlinkSync(path.join(__dirname, `api/public/images/products/featured/${product.photo}`));
+        fs.unlinkSync(path.join(__dirname, `public/images/products/featured/${product.photo}`));
         
         if (product.gallery_photo) {
             product.gallery_photo.map(data=>{
-                fs.unlinkSync(path.join(__dirname, `api/public/images/products/gallery/${data}`));
+                fs.unlinkSync(path.join(__dirname, `public/images/products/gallery/${data}`));
                 console.log(data);
             })
         }
